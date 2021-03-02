@@ -1,0 +1,86 @@
+*{ 
+     
+}
+
+#body{
+    background-image: url(background_bread-jpg) ;
+}
+
+img{
+    filter: blur(2px);
+    filter: brightness(50%);
+}
+
+.header_index{
+    grid-area: hei;
+      
+}
+
+.navigation{
+    grid-area: na;
+    
+}
+
+.öppetider{
+    grid-area: si1;
+    margin: 10px;
+}
+
+.om_oss{
+    grid-area: si2;
+    margin: 10px
+}
+
+
+.footer{
+    grid-area: fo;
+    background-color: rgb(73, 46, 28);
+    color: white;
+}
+
+/* MOBILE */
+@media screen and (max-width: 1023px){
+    #index{
+        display: grid;
+        width:100vw;
+        max-width:100%;
+        height:100vh;
+    
+        grid-template-areas:
+        'he'
+        'na'
+        'si1'
+        'si2'
+        'fo';
+        grid-template-rows: 20%, 10%, auto, auto, 20% ;
+        grid-template-columns: 100%;
+    }
+
+}
+
+
+/* DESKTOP */
+@media screen and (min-width: 1024px){
+    
+    .navigation_button{
+        display:none;
+    }
+
+    #index{
+        display: grid;
+        width:100vw;
+        max-width:100%;
+        height:100vh;
+    
+        grid-template-areas:
+        'hei hei'
+        'na na'
+        'si1 si2'
+        'fo fo';
+        grid-template-rows: 20%, 10%, auto, 20%;
+        grid-template-columns: 50%, 50%;
+    
+    }
+
+
+}
