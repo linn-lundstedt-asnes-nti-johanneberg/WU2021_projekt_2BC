@@ -1,42 +1,118 @@
 *{ 
-     
+  
+}
+
+.bg_image{
+    filter: blur(2px);
+    filter: brightness(50%);
+
 }
 
 #body{
-    background-image: url(background_bread-jpg) ;
+    
+    
 }
 
-img{
-    filter: blur(2px);
-    filter: brightness(50%);
+a {
+    color: white;
+    text-decoration: none;
 }
 
-.header_index{
-    grid-area: hei;
-      
+a:hover 
+{
+     color:#c7c7c7; 
+     text-decoration:none; 
+     cursor:pointer;  
+}
+
+.header{
+    grid-area: he;
+    text-align: center;
+    background-color: rgb(73, 46, 28);
+    color: white;
+    
 }
 
 .navigation{
     grid-area: na;
     
+    background-color: rgb(73, 46, 28);
+    color: white;
+    padding: 15px;
+   
+    
 }
-
-.öppetider{
-    grid-area: si1;
-    margin: 10px;
-}
-
-.om_oss{
-    grid-area: si2;
-    margin: 10px
-}
-
 
 .footer{
     grid-area: fo;
     background-color: rgb(73, 46, 28);
     color: white;
+    margin-top: 15px;
+    
+    padding: 15px;
 }
+
+.main_index{
+    max-width: 80%;
+    background-color: thistle;
+
+}
+
+.öppetider{
+    grid-area: si1;
+    margin: 10px;
+    border:rgb(73, 46, 28);
+}
+
+.om_oss{
+    grid-area: si2;
+    margin: 10px;
+    border:rgb(73, 46, 28);
+}
+
+
+.sortiment_links{
+    grid-area: nas;
+    margin: 10px;
+    background-color: rgb(17, 16, 16);
+    padding: 15px;
+    
+}
+
+.main_sortiment{
+    max-width: 80%;
+    background-color: thistle;
+    margin: 15px;
+    padding: 15px;
+
+}
+
+img{
+    width: 400px;
+
+}
+
+.main_kontakt{
+    background-color: thistle;
+    margin: 15px;
+    padding: 15px;
+}
+
+.a_k{
+    color: rgb(10, 10, 10);
+    text-decoration: none;
+}
+    
+
+.a_k:hover{
+    color:rgb(90, 87, 87); 
+     text-decoration:none; 
+     cursor:pointer;  
+} 
+
+     
+
+
 
 /* MOBILE */
 @media screen and (max-width: 1023px){
@@ -56,12 +132,32 @@ img{
         grid-template-columns: 100%;
     }
 
+    #sortiment{
+        display:grid;
+        width:100vw;
+        max-width:100%;
+        height:100vh;
+    
+        grid-template-areas:
+        'he'
+        'na'
+        'nas'
+        's1'
+        's2'
+        's3'
+        's4'
+        's5'
+        'fo';
+        grid-template-rows: 20%, 10%, 10%, auto, auto, auto, auto, auto, 20% ;
+        grid-template-columns: 100%;
+    }
+
 }
 
 
 /* DESKTOP */
 @media screen and (min-width: 1024px){
-    
+
     .navigation_button{
         display:none;
     }
@@ -73,13 +169,33 @@ img{
         height:100vh;
     
         grid-template-areas:
-        'hei hei'
+        'he he'
         'na na'
         'si1 si2'
         'fo fo';
         grid-template-rows: 20%, 10%, auto, 20%;
         grid-template-columns: 50%, 50%;
     
+    }
+
+    #sortiment{
+        display:grid;
+        width:100vw;
+        max-width:100%;
+        height:100vh;
+    
+        grid-template-areas:
+        'he he'
+        'na na'
+        'nas nas'
+        's1 s1'
+        's2 s2'
+        's3 s3'
+        's4 s4'
+        's5 s5'
+        'fo fo';
+        grid-template-rows: 20%, 10%, 10%, auto, auto, auto, auto, auto, 20% ;
+        grid-template-columns: 100%;
     }
 
 
