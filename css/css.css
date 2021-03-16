@@ -1,17 +1,12 @@
 *{ 
-  
-}
-
-.bg_image{
-    filter: blur(2px);
-    filter: brightness(50%);
 
 }
 
 #body{
-    
+    background-image: url(../img/background_bread.jpg);
     
 }
+
 
 a {
     color: white;
@@ -30,6 +25,7 @@ a:hover
     text-align: center;
     background-color: rgb(73, 46, 28);
     color: white;
+    height:80px;
     
 }
 
@@ -38,7 +34,9 @@ a:hover
     
     background-color: rgb(73, 46, 28);
     color: white;
-    padding: 15px;
+    padding: 10px;
+    height: 20px;
+    
    
     
 }
@@ -48,26 +46,58 @@ a:hover
     background-color: rgb(73, 46, 28);
     color: white;
     margin-top: 15px;
-    
     padding: 15px;
+    height: 20px;
+
 }
 
 .main_index{
     max-width: 80%;
-    background-color: thistle;
+    /*background-color: thistle;*/
 
 }
 
 .öppetider{
     grid-area: si1;
     margin: 10px;
-    border:rgb(73, 46, 28);
+    padding: 5px;
+    border-color:rgb(73, 46, 28);
+    border-style:solid;
+    border-width: 4px;
+    border-radius: 2px;
+    background-color: thistle;
+    width:300px;
+    
+    display:flex;
+    text-align: center;
+    justify-content: space-evenly;
+
+}
+
+h4 {
+    
+}
+
+.dagar{
+    width: 80px;
+}
+
+.tider{
+    width:80px;
 }
 
 .om_oss{
     grid-area: si2;
     margin: 10px;
-    border:rgb(73, 46, 28);
+    padding: 5px;
+    
+    border-color:rgb(73, 46, 28);
+    border-style:solid;
+    border-width: 4px;
+    border-radius: 2px;
+    background-color: thistle;
+    width: 500px;
+    text-align: center;
 }
 
 
@@ -80,10 +110,13 @@ a:hover
 }
 
 .main_sortiment{
-    max-width: 80%;
-    background-color: thistle;
+   
     margin: 15px;
     padding: 15px;
+    
+    display:flex;
+    align-content: space-around;
+    flex-wrap: wrap;
 
 }
 
@@ -92,12 +125,97 @@ img{
 
 }
 
-.main_kontakt{
-    background-color: thistle;
-    margin: 15px;
-    padding: 15px;
+p{
+    font-size: larger;
 }
 
+#mackor{
+    background-color: thistle;
+    width: 450px;
+    padding: 20px;
+    margin: 5px;   
+    border-color:rgb(73, 46, 28);
+    border-style:solid;
+    border-width: 4px;
+    border-radius: 2px;
+   
+    
+}
+
+#varmmat{
+    background-color: thistle;
+    width: 450px;
+    padding: 20px;
+    margin: 5px; 
+    border-color:rgb(73, 46, 28);
+    border-style:solid;
+    border-width: 4px;
+    border-radius: 2px;
+}
+
+#sallader{
+    background-color: thistle;
+    width: 450px;
+    padding: 20px;
+    margin: 5px; 
+    border-color:rgb(73, 46, 28);
+    border-style:solid;
+    border-width: 4px;
+    border-radius: 2px;
+}
+
+#bullarokakor{
+    background-color: thistle;
+    width: 450px;
+    padding: 20px;
+    margin: 5px; 
+    border-color:rgb(73, 46, 28);
+    border-style:solid;
+    border-width: 4px;
+    border-radius: 2px;
+}
+
+#tartorobakelser{
+    background-color: thistle;
+    width: 450px;
+    padding: 20px;
+    margin: 5px; 
+    border-color:rgb(73, 46, 28);
+    border-style:solid;
+    border-width: 4px;
+    border-radius: 2px;
+}
+
+
+.main_kontakt{
+    background-color: thistle;
+    margin: 5px;
+    
+}
+
+#tel{
+    background-color: thistle;
+}
+
+#mail{
+    background-color: thistle;
+
+}
+
+#insta{
+    background-color: thistle;
+
+}
+
+#faceb{
+    background-color: thistle;
+
+}
+
+#location{
+    background-color: thistle;
+
+}
 .a_k{
     color: rgb(10, 10, 10);
     text-decoration: none;
@@ -128,7 +246,7 @@ img{
         'si1'
         'si2'
         'fo';
-        grid-template-rows: 20%, 10%, auto, auto, 20% ;
+        grid-template-rows: 20% 10% auto auto 20% ;
         grid-template-columns: 100%;
     }
 
@@ -148,7 +266,7 @@ img{
         's4'
         's5'
         'fo';
-        grid-template-rows: 20%, 10%, 10%, auto, auto, auto, auto, auto, 20% ;
+        grid-template-rows: 20% 10% 10% auto auto auto auto auto 20% ;
         grid-template-columns: 100%;
     }
 
@@ -173,8 +291,8 @@ img{
         'na na'
         'si1 si2'
         'fo fo';
-        grid-template-rows: 20%, 10%, auto, 20%;
-        grid-template-columns: 50%, 50%;
+        grid-template-rows: 20% 10% auto 20%;
+        grid-template-columns: 50% 50%;
     
     }
 
@@ -194,7 +312,7 @@ img{
         's4 s4'
         's5 s5'
         'fo fo';
-        grid-template-rows: 20%, 10%, 10%, auto, auto, auto, auto, auto, 20% ;
+        grid-template-rows: 20% 10% 10% auto auto auto auto auto 20% ;
         grid-template-columns: 100%;
     }
 
