@@ -26,6 +26,7 @@ a:hover
     background-color: rgb(73, 46, 28);
     color: white;
     height:80px;
+    padding-top:10px;
     
 }
 
@@ -35,30 +36,33 @@ a:hover
     background-color: rgb(73, 46, 28);
     color: white;
     padding: 10px;
-    height: 20px;
-    
-   
-    
+    height: 20px; 
+    margin-top: 10px; 
+    text-align: right;
+
 }
 
 .footer{
     grid-area: fo;
+
     background-color: rgb(73, 46, 28);
     color: white;
     margin-top: 15px;
     padding: 15px;
     height: 20px;
+    
+
 
 }
 
 .main_index{
     max-width: 80%;
-    /*background-color: thistle;*/
+    
+    grid-area: mai;
 
 }
 
 .öppetider{
-    grid-area: si1;
     margin: 10px;
     padding: 5px;
     border-color:rgb(73, 46, 28);
@@ -75,6 +79,7 @@ a:hover
 }
 
 h4 {
+    text-align: center;
     
 }
 
@@ -87,7 +92,6 @@ h4 {
 }
 
 .om_oss{
-    grid-area: si2;
     margin: 10px;
     padding: 5px;
     
@@ -118,6 +122,8 @@ h4 {
     align-content: space-around;
     flex-wrap: wrap;
 
+    grid-area: mas;
+
 }
 
 img{
@@ -126,10 +132,11 @@ img{
 }
 
 p{
-    font-size: larger;
+    /*font-size: larger;*/
 }
 
 #mackor{
+
     background-color: thistle;
     width: 450px;
     padding: 20px;
@@ -143,6 +150,7 @@ p{
 }
 
 #varmmat{
+
     background-color: thistle;
     width: 450px;
     padding: 20px;
@@ -154,6 +162,7 @@ p{
 }
 
 #sallader{
+
     background-color: thistle;
     width: 450px;
     padding: 20px;
@@ -165,6 +174,7 @@ p{
 }
 
 #bullarokakor{
+
     background-color: thistle;
     width: 450px;
     padding: 20px;
@@ -176,6 +186,7 @@ p{
 }
 
 #tartorobakelser{
+
     background-color: thistle;
     width: 450px;
     padding: 20px;
@@ -187,35 +198,30 @@ p{
 }
 
 
-.main_kontakt{
-    background-color: thistle;
-    margin: 5px;
+.main_kontakt{  
+    padding: 15px;
+    
+    display:flex;
+    align-content: space-around;
+
+    grid-area: mak;
+
     
 }
 
-#tel{
+#info{
     background-color: thistle;
+    border-color:rgb(73, 46, 28);
+    border-style:solid;
+    border-width: 4px;
+    border-radius: 2px;
+    width: 300px;
+    text-align:left;
+    margin: 10px;
+    text-align: center;
+    padding: 5px;
 }
 
-#mail{
-    background-color: thistle;
-
-}
-
-#insta{
-    background-color: thistle;
-
-}
-
-#faceb{
-    background-color: thistle;
-
-}
-
-#location{
-    background-color: thistle;
-
-}
 .a_k{
     color: rgb(10, 10, 10);
     text-decoration: none;
@@ -228,6 +234,64 @@ p{
      cursor:pointer;  
 } 
 
+.main_cater{
+   
+    margin: 15px;
+    padding: 15px;
+    height: 300px;
+    
+    display:flex;
+    align-content: space-around;
+    flex-wrap: wrap;
+
+    grid-area: mac;
+
+}
+
+.cater_info{
+    grid-area: sc;
+
+    background-color: thistle;
+    border-color:rgb(73, 46, 28);
+    border-style:solid;
+    border-width: 4px;
+    border-radius: 2px;
+    width: 500px;
+    text-align: center;
+
+}
+
+.a_c{
+    color: rgb(39, 96, 122);
+    
+    text-decoration: underline;
+}
+    
+
+.a_c:hover{
+    color:rgb(18, 24, 77); 
+     text-decoration:underline; 
+     cursor:pointer;  
+} 
+
+.main_cater2{
+    margin: 15px;
+    padding: 15px;
+
+    grid-area: mac2;
+    
+}
+
+.cater_form{
+
+    background-color: thistle;
+    border-color:rgb(73, 46, 28);
+    border-style:solid;
+    border-width: 4px;
+    border-radius: 2px;
+    width: 500px;
+    padding:15px;
+}
      
 
 
@@ -243,10 +307,9 @@ p{
         grid-template-areas:
         'he'
         'na'
-        'si1'
-        'si2'
+        'mai'
         'fo';
-        grid-template-rows: 20% 10% auto auto 20% ;
+        grid-template-rows: 20% 10% auto 20% ;
         grid-template-columns: 100%;
     }
 
@@ -260,15 +323,57 @@ p{
         'he'
         'na'
         'nas'
-        's1'
-        's2'
-        's3'
-        's4'
-        's5'
+        'mas'
         'fo';
-        grid-template-rows: 20% 10% 10% auto auto auto auto auto 20% ;
+        grid-template-rows: 20% 10% 10% auto  20% ;
         grid-template-columns: 100%;
     }
+
+    #kontakt{
+        display:grid;
+        width:100vw;
+        max-width:100%;
+        height:100vh;
+
+        grid-template-areas: 
+        "he"
+        "na"
+        "mak"
+        "fo";
+        grid-template-rows: 20% 10% 10% auto 20% ;
+        grid-template-columns: 100%; 
+
+    }
+
+    #catering{
+        display:grid;
+        width:100vw;
+        max-width:100%;
+        height:100vh;
+
+        grid-template-areas: 
+        "he"
+        "na"
+        "sc"
+        "fo";
+        grid-template-rows: 20% 10% 10% auto 20% ;
+        grid-template-columns: 100%; 
+
+    }
+
+    #catering2{
+        display:grid;
+        width:100vw;
+        max-width:100%;
+        height:100vh;
+
+        grid-template-areas: 
+        "he"
+        "na"
+        "cf"
+        "fo";
+        grid-template-rows: 20% 10% 10% auto 20% ;
+        grid-template-columns: 100%; 
 
 }
 
@@ -287,12 +392,12 @@ p{
         height:100vh;
     
         grid-template-areas:
-        'he he'
-        'na na'
-        'si1 si2'
-        'fo fo';
+        'he' 
+        'na' 
+        'mai'
+        'fo' ;
         grid-template-rows: 20% 10% auto 20%;
-        grid-template-columns: 50% 50%;
+        grid-template-columns: 100%;
     
     }
 
@@ -303,17 +408,62 @@ p{
         height:100vh;
     
         grid-template-areas:
-        'he he'
-        'na na'
-        'nas nas'
-        's1 s1'
-        's2 s2'
-        's3 s3'
-        's4 s4'
-        's5 s5'
-        'fo fo';
-        grid-template-rows: 20% 10% 10% auto auto auto auto auto 20% ;
+        'he' 
+        'na' 
+        'nas' 
+        'mas' 
+        'fo';
+        grid-template-rows: 20% 10% 10% auto 20% ;
         grid-template-columns: 100%;
+    }
+
+    #kontakt{
+        display:grid;
+        width:100vw;
+        max-width:100%;
+        height:100vh;
+
+        grid-template-areas: 
+        "he"
+        "na"
+        "mak"
+        "fo";
+        grid-template-rows: 20% 10% 10% auto 20% ;
+        grid-template-columns: 100%; 
+
+    }
+
+    #catering{
+        display:grid;
+        width:100vw;
+        max-width:100%;
+        height:100vh;
+
+        grid-template-areas: 
+        "he"
+        "na"
+        "mac"
+        "fo";
+        grid-template-rows: 20% 10% 10% auto 20% ;
+        grid-template-columns: 100%; 
+
+    }
+
+    #catering2{
+        display:grid;
+        width:100vw;
+        max-width:100%;
+        height:100vh;
+
+        grid-template-areas: 
+        "he"
+        "na"
+        "mac2"
+        "fo";
+        grid-template-rows: 20% 10% 10% auto 20% ;
+        grid-template-columns: 100%; 
+
+
     }
 
 
